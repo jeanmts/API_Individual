@@ -49,7 +49,7 @@ public class PlayListController {
 
     @Operation(summary = "Cadastrar uma playList")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "playList cadastrada com sucesso"),
+            @ApiResponse(responseCode = "201", description = "playList cadastrada com sucesso"),
             @ApiResponse(responseCode = "400", description = "Erro ao cadastrar a playList"),
             @ApiResponse(responseCode = "500", description = "Erro interno no servidor")
     })

@@ -53,7 +53,7 @@ public class UsuariosController {
 
     @Operation(summary = "Cadastrar um Usuario")
     @ApiResponses(value = {
-            @ApiResponse(responseCode = "200", description = "Usuario cadastrado com sucesso"),
+            @ApiResponse(responseCode = "201", description = "Usuario cadastrado com sucesso"),
             @ApiResponse(responseCode = "400", description = "Erro ao cadastrar  usuario"),
             @ApiResponse(responseCode = "500", description = "Erro interno no servidor")
     })

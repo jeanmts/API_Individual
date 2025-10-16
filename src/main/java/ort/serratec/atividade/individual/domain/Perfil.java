@@ -24,6 +24,7 @@ public class Perfil {
     @Past(message = "Data de nascimento deve ser inferior a data atual")
     private LocalDate dataNascimento;
 
+    @Schema(description = "Perfil do usuario")
     @JsonIgnore
     @OneToOne(mappedBy = "perfil")
     private Usuario usuario;
@@ -69,6 +70,5 @@ public class Perfil {
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
     }
-
 
 }
