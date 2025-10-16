@@ -23,8 +23,6 @@ public class UsuariosController {
 
     @Autowired
     private UsuarioRepository usuarioRepository;
-    @Autowired
-    private PerfilRepository perfilRepository;
 
     @Operation(summary = "Lista todos os Usuarios")
     @ApiResponses(value = {
@@ -79,7 +77,7 @@ public class UsuariosController {
         return ResponseEntity.notFound().build();
     }
 
-    @Operation(summary = "Deletar  um Usuario pelo ID")
+    @Operation(summary = "Deletar um Usuario pelo ID")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Usuario deletado com sucesso"),
             @ApiResponse(responseCode = "400", description = "Usuario informado não foi encontrado"),

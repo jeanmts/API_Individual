@@ -24,6 +24,9 @@ public class Musica {
     @NotNull(message = "O gênero musical deve ser informado!")
     private GeneroMusical generoMusical;
 
+    @ManyToMany(mappedBy = "musica")
+    private List<PlayList> playLists;
+
     @ManyToMany
     @JoinTable(name = "musica_artista",
             joinColumns = @JoinColumn(name = "id_musica"),
