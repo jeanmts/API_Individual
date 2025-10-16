@@ -1,8 +1,10 @@
 package ort.serratec.atividade.individual.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Past;
 import jakarta.validation.constraints.Size;
 
@@ -18,11 +20,12 @@ public class Perfil {
     private String telefone;
 
     @Schema(description = "Data de nascimento vinculado ao perfil")
-    @NotBlank(message = "Data de nascimento deve ser informada")
+    @NotNull(message = "Data de nascimento deve ser informada")
     @Past(message = "Data de nascimento deve ser inferior a data atual")
     private LocalDate dataNascimento;
 
-    @OneToOne(mappedBy = "usuario")
+    @JsonIgnore
+    @OneToOne(mappedBy = "perfil")
     private Usuario usuario;
 
     public Perfil() {
@@ -66,4 +69,6 @@ public class Perfil {
     public void setUsuario(Usuario usuario) {
         this.usuario = usuario;
     }
+
+
 }

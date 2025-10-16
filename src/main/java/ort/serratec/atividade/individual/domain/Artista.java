@@ -54,4 +54,5 @@ public class Artista {
     public void setNacionalidade(String nacionalidade) {
         this.nacionalidade = nacionalidade;
     }
+
 }
