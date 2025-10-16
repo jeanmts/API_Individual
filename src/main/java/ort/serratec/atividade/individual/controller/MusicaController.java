@@ -23,7 +23,6 @@ public class MusicaController {
     @Autowired
     private MusicaRepository musicaRepository;
 
-
     @Operation(description = "Lista todas as musicas")
     @ApiResponses(value = {
             @ApiResponse(responseCode = "200", description = "Listando todas as Musicas com sucesso"),
