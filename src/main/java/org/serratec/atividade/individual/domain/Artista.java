@@ -5,7 +5,6 @@ import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
-import java.util.List;
 
 @Entity
 public class Artista {
@@ -23,7 +22,6 @@ public class Artista {
 
     public Artista() {
     }
-
     public Artista(Long id, String nome, String nacionalidade) {
         this.id = id;
         this.nome = nome;

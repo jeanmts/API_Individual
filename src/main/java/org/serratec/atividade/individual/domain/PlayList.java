@@ -27,7 +27,6 @@ public class PlayList {
     @JoinColumn(name = "id_usuario")
     private Usuario usuario;
 
-
     @ManyToMany
     @JoinTable(name = "playlist_musica",
             joinColumns = @JoinColumn(name = "id_playlist"),
