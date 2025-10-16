@@ -1,8 +1,10 @@
 package ort.serratec.atividade.individual.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import ort.serratec.atividade.individual.enums.GeneroMusical;
 
@@ -20,7 +22,7 @@ public class Musica {
     private String titulo;
 
     @Schema(description = "Gênero Musical", name = "Gênero musical: ROCK,POP,SAMBA,FUNK,SERTANEJO")
-    @NotBlank(message = "O gênero musical deve ser informado!")
+    @NotNull(message = "O gênero musical deve ser informado!")
     private GeneroMusical generoMusical;
 
     @ManyToMany
@@ -69,5 +71,9 @@ public class Musica {
 
     public void setArtistas(List<Artista> artistas) {
         this.artistas = artistas;
+    }
+
+    public void setGeneroMusical(GeneroMusical generoMusical) {
+        this.generoMusical = generoMusical;
     }
 }

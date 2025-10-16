@@ -23,13 +23,12 @@ public class Usuario {
     @NotBlank(message = "O e-mail deve ser informado!")
     private String email;
 
-    @OneToOne
+    @OneToOne(cascade = CascadeType.PERSIST)
     @JoinColumn(name = "id_perfil")
     private Perfil perfil;
 
-    @OneToMany
+    @OneToMany(mappedBy = "usuario")
     @Schema(description = "Playlist do usuario")
-    @JoinColumn(name = "id_playlist")
     private List<PlayList> playLists;
 
     public Usuario() {
@@ -82,4 +81,5 @@ public class Usuario {
     public void setPlayLists(List<PlayList> playLists) {
         this.playLists = playLists;
     }
+
 }

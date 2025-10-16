@@ -1,5 +1,6 @@
 package ort.serratec.atividade.individual.domain;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.NotBlank;
@@ -20,6 +21,12 @@ public class PlayList {
     @Schema(description = "Descrição da playlist")
     @Size(min = 1, max = 50)
     private String descricao;
+
+    @JsonIgnore
+    @ManyToOne
+    @JoinColumn(name = "id_usuario")
+    private Usuario usuario;
+
 
     @ManyToMany
     @JoinTable(name = "playlist_musica",
@@ -68,4 +75,13 @@ public class PlayList {
     public void setMusica(List<Musica> musica) {
         this.musica = musica;
     }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
+    }
+
 }
