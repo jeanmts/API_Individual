@@ -46,7 +46,7 @@ public class ArtistasController {
         if (optionalArtista.isPresent()) {
             return ResponseEntity.ok(optionalArtista.get());
         }
-        return null;
+        return ResponseEntity.notFound().build();
     }
     @Operation(summary = "Cadastra um novo Artista")
     @ApiResponses(value = {
