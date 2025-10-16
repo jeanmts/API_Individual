@@ -27,10 +27,10 @@ public class OpenAPIConfig {
                 .url("https://www.apache.org/licenses/LICENSE-2.0");
 
         Info info = new Info()
-                .title("API - Controle de Manutenção de veiculos")
+                .title("API - Serratec Music")
                 .version("1.0")
                 .contact(contact)
-                .description("API desenvolvida para ter o controle de manutenções de veiculos")
+                .description("API do Serratec Music")
                 .termsOfService("https://www.serratec.org.br/")
                 .license(apacheLicense);
 
