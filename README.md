@@ -13,6 +13,29 @@
 Esta API foi desenvolvida como atividade prática da disciplina de Desenvolvimento de API Restful com Spring Boot.  
 O objetivo é implementar uma aplicação **RESTful** que gerencie **usuários, perfis, artistas, músicas e playlists**, aplicando conceitos de **JPA, relacionamentos, validações, tratamento de exceções e documentação com Swagger**.
 
+
+## 🚀 Como Rodar o Projeto
+
+### 🧩 Pré-requisitos
+Antes de iniciar, certifique-se de ter instalado:
+- **Java 17** ou superior  
+- **Maven 3.8+**  
+- **PostgreSQL**   
+- Uma IDE de sua preferência (**IntelliJ**, **Eclipse**, **VS Code**, etc.)
+
+---
+
+## ⚙️ Configuração do Banco de Dados
+
+**Edite o arquivo `src/main/resources/application.properties` com as credenciais do seu banco.**
+
+### 🐘 Exemplo para PostgreSQL:
+spring.datasource.url=jdbc:postgresql://localhost:5432/playlistdb
+spring.datasource.username=seu_usuario
+spring.datasource.password=sua_senha  
+spring.jpa.hibernate.ddl-auto=update      
+spring.jpa.show-sql=true                         
+spring.jpa.properties.hibernate.format_sql=true     
 ---
 
 ## 🧩 Funcionalidades Principais
@@ -22,7 +45,7 @@ O objetivo é implementar uma aplicação **RESTful** que gerencie **usuários, 
   - **Artista**
   - **Música**
   - **Playlist**
-- Criação automática de **Perfil** junto com o **Usuário**
+- Criação automática de *Perfil* junto com o **Usuário**
 - Associação de **Playlist** a um **Usuário existente**
 - Atualização de **músicas em uma playlist**
 - Validação de dados com **Bean Validation**
