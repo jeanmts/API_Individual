@@ -22,6 +22,7 @@ public class Musica {
 
     @Schema(description = "Gênero Musical", name = "Gênero musical: ROCK,POP,SAMBA,FUNK,SERTANEJO")
     @NotNull(message = "O gênero musical deve ser informado!")
+    @Enumerated(EnumType.STRING)
     private GeneroMusical generoMusical;
 
     @ManyToMany(mappedBy = "musica")
